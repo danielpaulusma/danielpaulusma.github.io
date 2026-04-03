@@ -15,21 +15,23 @@
     margin-left: 2em !important; 
      }
 
-  @media screen and (max-width: 480px {
-    ol {
-      margin-left: 23px !important;
-     padding-left: 10px !important;
-      font-size: 0.8em !important;
-    }
-  }
+  /* 1. Alleen voor Telefoon RECHTOP */
+@media screen and (max-width: 480px) and (orientation: portrait) { 
+  ol { 
+    margin-left: 23px !important; 
+    padding-left: 10px !important; 
+    font-size: 0.8em !important; 
+  } 
+}
 
-    @media screen and (min-width: 481px {
-    ol {
-      margin-left: 45px !important;
-     padding-left: 0px !important;
-      font-size: 0.6em !important;
-    }
+/* 2. Alleen voor Telefoon LIGGEND (Landscape) */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+  ol {
+    margin-left: 65px !important; /* Extra ruimte voor de 20, 30, etc. */
+    padding-left: 10px !important; 
+    font-size: 0.8em !important;
   }
+}
 </style>
 
 <h1><font color="navy">Preprints</font></h1>
