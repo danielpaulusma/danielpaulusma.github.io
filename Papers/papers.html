@@ -10,17 +10,31 @@
 <meta name="format-detection" content="telephone=no">
  
  <basefont face="arial" size="2">
-<style>
+ <style>
+  @media screen and (min-width: 951px){
   ol { padding-left: 0 !important;
     margin-left: 2em !important; 
+      font-size: 1em;
      }
-
-  @media  {
-    ol {
-      margin-left: 23px !important;
-      font-size: 0.8em !important;
-    }
   }
+
+  /* 1. Alleen voor Telefoon RECHTOP */
+@media screen and (max-width: 480px) and (orientation: portrait)  { 
+  ol { 
+    margin-left: 23px !important; 
+    padding-left: 10px !important; 
+    font-size: 0.8em !important; 
+  } 
+}
+
+/* 2. Alleen voor Telefoon LIGGEND (Landscape) */
+@media screen and (max-height: 480px) and (orientation: landscape) and (pointer: coarse) {
+  ol {
+    margin-left: 65px !important; /* Extra ruimte voor de 20, 30, etc. */
+    padding-left: 10px !important; 
+    font-size: 0.8em !important;
+  }
+}
 </style>
     
 <h1><font color="navy">Papers</font></h1> 
